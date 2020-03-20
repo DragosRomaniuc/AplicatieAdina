@@ -1,17 +1,17 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Proiectul meu",
+  "description": "Proiect Licenta",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DragosRomaniuc/AplicatieAdina.git"
   },
   "author": "Adina",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/DragosRomaniuc/AplicatieAdina/issues"
   },
