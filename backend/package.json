@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Proiect Licenta",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DragosRomaniuc/AplicatieAdina/issues"
   },
-  "homepage": "https://github.com/DragosRomaniuc/AplicatieAdina#readme"
+  "homepage": "https://github.com/DragosRomaniuc/AplicatieAdina#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

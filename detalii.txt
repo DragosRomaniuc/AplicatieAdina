@@ -1,0 +1,60 @@
+Rulam proiectul cu
+npm start de fiecare data
+
+NODE JS Javascript pe calculator;
+    server = o conexiune pe internet la care au access toti oamenii de pe internet
+    HTTP Hypter text transfer protocol
+    www.mysite.com -> 79.112.12.12:3000
+    LOGIN -> {nume, parola} -> apas pe buton -> 
+    prin protocolul HTTTP se trimite un STRING 'client:www.mysite.com,headers:HTTP,authentificationheader: asdasdsas,
+    body:nume:dragos;parola;asd123'
+
+    Pe serverul meu de nodeJS 79.112.12313.:3000
+
+    79.112.12313.:3000/login -> trebuie sa ii asignez un controller
+    controler = o functie care handleuiste requestu
+    o functi de forma
+    79.112.12313.:3000/login  -> 
+    
+    function onLoginRequest(request, response) {
+        
+    }
+
+
+    www.mysite.com -> request la ruta -> Serverul proceseaza ceva -> 
+           faci ceva cu responseul         <- response <-
+
+    EXPRESS.JS 
+        -> 1. Sa iti deschizi serverul pe IPul tau,
+        2. Sa accepti requesturi
+        3. Sa le handleuiesti
+        4. Iti transforma toate requesturile de forma STRING din HTTP
+        
+        JSON 
+        {
+            nume: 'dragos
+        }
+
+node e envirnment de lucru unde folosim JS
+    Express O librarie facuta pentru nodeJS
+
+
+    //1
+let nume = myObj.nume;
+
+//2
+let { nume, gender } = myObj;
+// let nume = myObj.nume;
+// let gender = myObj.nume;
+// echivalent
+// const obj = require('./routes').obj;
+// const obj2 = require('./routes').obj2;
+
+let myObj = {
+    nume: 'Dragos',
+    gender: 'Male'
+};
+
+const { obj } = require('./routes/indexasd123.js');
+// nodejs verifica automat fara sa ii zic eu /routes/index.js
+
