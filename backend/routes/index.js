@@ -1,10 +1,9 @@
-let obj = {
-    nume: "Dragos"
-};
+const express = require('express');
+const router = express.Router();
 
-let obj2 = {
-    nume: "Adina"
-};
+//Ruta principala
+router.get('/', (request, response) => {
+    response.send("Am ajuns in routes/index.js");
+})
 
-module.exports = { obj, obj2 };
-
+module.exports = router;

@@ -20,6 +20,10 @@ NODE JS Javascript pe calculator;
         
     }
 
+    (req, res) => {
+
+    }
+
 
     www.mysite.com -> request la ruta -> Serverul proceseaza ceva -> 
            faci ceva cu responseul         <- response <-
@@ -58,3 +62,31 @@ let myObj = {
 const { obj } = require('./routes/indexasd123.js');
 // nodejs verifica automat fara sa ii zic eu /routes/index.js
 
+https://expressjs.com/en/advanced/best-practice-security.html#use-helmet
+
+
+
+// 127.0.0.1/
+//         //la ruta '/' -> accesezi controllerul asta =>
+// app.get('/',                                      (req, res) => {
+
+// })
+
+function onInitialRouteController(request, response) {
+    console.log(request)
+}
+
+app.get('127.0.0.1/', onInitialRouteController);
+
+orice site care face un request cu metoda GET 
+POST
+PUT (EDIT)
+DELETE
+GET
+
+
+'/' 
+// 127.0.0.1/ -> routes -> 127.0.0.1/ -> (req, res, next) => {
+//     console.log('am accesat folderul routes');
+//     res.send({status: "OK"});
+// } din routes/index.js 
