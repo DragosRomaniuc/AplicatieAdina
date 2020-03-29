@@ -17,13 +17,13 @@ router.post('/createAccount', async (request, response, next) => {
             status:"SUCCES",
             data: createdAccount
         })
-     })
-
-    
-    
-        
+     })     
    
 });
+router.get('/getAccount',async function getfunct (request, response, next){
+    console.log(request.body);
+    response.send(request.body);
+})
 
 
 module.exports = router;
