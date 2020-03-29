@@ -18,15 +18,19 @@ const mongooseConnection = mongoose.connection;
 mongooseConnection.on('error',
     console.error.bind(console, 'MongoDB connection error:')
 );
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/', routes);
+
+
 //stim ca serverul nostru de express acum contine doar RUTA 'localhost/'
 // 127.0.0.1/ == localhost/
 // HTTP -> TCP 
 //Daca requestul a venit pe /login, noi in server nu avem nevoie de o ruta /login si ii trimitem eroare
+// POST -> localhost/account/createAccount nu mai gaseste nicio ruta si ii intoarce 404
 app.use((request, response, next) => next(createError(404)));
 //next Te trimite la urmatorul app.use cu ACELASI request la care am adaugat createError()
 // request{
