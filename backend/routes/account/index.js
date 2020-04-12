@@ -1,8 +1,9 @@
 const router = require('express-promise-router')();
 const { Account } = require('../../models');
 
-
-
+// /account/
+// /account/createAccount trebuie request HTTP POST
+// /asdasdbsayudbasyudbasuybdasubd
 router.post('/createAccount', async (request, response, next) => {
     const { username, password } = request.body;
     // username echivalent cu request.body.username
@@ -19,10 +20,6 @@ router.post('/createAccount', async (request, response, next) => {
         })
      })
 
-    
-    
-        
-   
 });
 
 

@@ -4,7 +4,9 @@ const mongoose = require('mongoose'); // vorbit cu baza de date
 const helmet = require('helmet') // protejam serverul http
 const bodyparser = require('body-parser');
 const createError = require('http-errors'); //librarie care ne ofera mai multe functii cu diferite erori
+
 const routes = require('./routes');
+
 const app = express(); //pune ce are libraria aia in variabila app;
 
 app.use(helmet());
@@ -13,6 +15,8 @@ mongoose.connect('mongodb://localhost/aplicatieAdina', {
     useNewUrlParser: true,
     useFindAndModify: false
 });
+
+
 
 const mongooseConnection = mongoose.connection;
 mongooseConnection.on('error',
@@ -25,6 +29,8 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/', routes);
 
+// /account/createabdayudbyabdyad
+
 
 //stim ca serverul nostru de express acum contine doar RUTA 'localhost/'
 // 127.0.0.1/ == localhost/
@@ -32,6 +38,8 @@ app.use('/', routes);
 //Daca requestul a venit pe /login, noi in server nu avem nevoie de o ruta /login si ii trimitem eroare
 // POST -> localhost/account/createAccount nu mai gaseste nicio ruta si ii intoarce 404
 app.use((request, response, next) => next(createError(404)));
+// request.body.error.code = 404
+// request.body.error.status  = "nu merge frt"
 //next Te trimite la urmatorul app.use cu ACELASI request la care am adaugat createError()
 // request{
 //     blabla

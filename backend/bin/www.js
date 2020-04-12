@@ -15,8 +15,16 @@ app.set('port', port);
 // + ne da acces la functii utile
 const server = http.createServer(app);
 server.listen(port); //3000
-
 // localhost/3000 serverul nostru.
+
+// localhost:3000/accounts/createAccount
+// POSTMAN 
+//  sau cu un site  fetch('localhost:3000/accounts/createAccount', {username:'dragos',parola:'asd123'}).then(raspuns=>{
+        // console.log(raspuns)
+        // BRAVO, Ai creat accountul
+        // let myResponse = raspuns;
+        // alert(myResponse)
+// })
 
 server.on('error', () => {
     console.log('Am gasit o eroare la server');

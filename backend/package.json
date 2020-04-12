@@ -26,5 +26,6 @@
     "http-errors": "^1.7.3",
     "mongoose": "^5.9.5",
     "morgan": "^1.10.0"
-  }
+  },
+  "cheiaMea": "asd123"
 }
