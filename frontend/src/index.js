@@ -5,13 +5,7 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    <App />
-    <App />
-    <App />
-    <App />
-    <App />
-    <App />
+      <App titluMeu="titlu meu" bodyMeu="bodyMeu" />
   </React.StrictMode>,
   document.getElementById('root')
 );

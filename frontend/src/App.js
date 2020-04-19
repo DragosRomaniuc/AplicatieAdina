@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-
+import Header from './Components/Header';
 
 class App extends Component {
-
-
+  constructor(props){
+    super(props);
+  }
+  
   render() {
-
+    console.log(this.props)
     return (
-      
+     <div>
+        <Header titluMeu={this.props.titluMeu} />
+
+     </div>
     )
   }
 
@@ -21,3 +23,5 @@ class App extends Component {
 export default App;
 
 
+// React ne lasa sa scriem JSX = HTML + JS
+// COmponent ne ofera acces la diferite functii de genul render();
