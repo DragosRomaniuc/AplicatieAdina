@@ -4,23 +4,29 @@ import Header from './Components/Header';
 class App extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      myName: "Dragos"
+    }
   }
   
   render() {
-    console.log(this.props)
     return (
-     <div>
-        <Header titluMeu={this.props.titluMeu} />
-
+     <div>  
+      <Header />
      </div>
     )
   }
 
 }
 
-
-
 export default App;
+
+
+
+
+// blablabla CONNECT(
+//   isAuth blabla
+// )(APP)
 
 
 // React ne lasa sa scriem JSX = HTML + JS

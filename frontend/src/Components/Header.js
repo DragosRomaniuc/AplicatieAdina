@@ -1,92 +1,62 @@
 import React, { Component } from 'react';
-import Timer from 'react-compound-timer';
+import { connect } from 'react-redux';
+
 
 class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            titlu: '',
-            buttonText: "Apasa-ma",
-            butonApasat: false,
-            pagina: 2,
-            timerBackward: 60,
-            timerForward: 0,
-            stopTimer: false
+          nume: 'asd'
         }
     }
 
-    componentDidMount() {
-        var myInterval = setInterval(() => {
-            this.setState({ timerBackward: this.state.timerBackward - 1,timerForward: this.state.timerForward +1 })
-            this.state.timer === 0 && clearInterval(myInterval);
-        }, 1000)
-    }
-
-
-    handleClick = () => {
-        this.setState({
-            butonApasat: true
-        })
-    }
-
-    afiseazaTitlu = () => {
-        return this.state.titlu
-    }
-
-    handleInputChange = event => {
-        this.setState({
-            titlu: event.target.value
-        });
-    }
-
-    handleClickInapoi = () => {
-        if (this.state.pagina < 1) {
-            return;
-        }
-        this.setState({
-            pagina: this.state.pagina - 1
-        })
-    }
-
-    handleClickInainte = () => {
-        if (this.state.pagina > 2) {
-            return;
-        }
-        this.setState({
-            pagina: this.state.pagina + 1
-        })
-    }
-
-
-    renderContent = () => {
-        return this.state.pagina === 0 ? <div> 
-            pagina 0 
-           <div>
-           Timp ramas: {this.state.timerBackward}s
-           </div>
-
-           <div>
-           Timp petrecut: {this.state.timerForward}s
-           </div>
-        
-        </div>
-            : this.state.pagina === 1 ? <div> pagina 1</div>
-                : this.state.pagina === 2 ? <div> pagina 2</div>
-                    : <div> pagina 2</div>
-
-    }
 
 
 
     render() {
+        console.log(this.props, 'Proprietatile din Header primite de la App')
         return (
             <div>
-                {this.renderContent()}
-                <button onClick={this.handleClickInapoi}> {"<-"} </button>
-                <button onClick={this.handleClickInainte}> -> </button>
+              blabla
             </div>
         )
     }
 }
 
-export default Header;
+// this.props.proprietatileMele.auth 
+// {
+//     authSession: null,
+//     isAuth: true
+// };
+
+const mapStateToProps = rootReducer => ({
+   proprietatileMele: rootReducer.auth
+ })
+ 
+ 
+ export default connect(
+     mapStateToProps
+ )(Header);
+
+
+
+
+
+
+
+// this.props.state.auth
+//                 .user
+//                 lectii
+// echiv
+// const mapStateToProps = rootReducer => ({
+//    state: rootReducer
+// })
+
+
+// this.props.auth
+// this.props.autentificare : {
+//     authSession: null,
+//     isAuth: false
+// }
+
+
